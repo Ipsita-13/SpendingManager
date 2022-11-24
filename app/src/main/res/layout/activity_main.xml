@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/DailyLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spending Limit!"
+        android:layout_marginTop="200dp"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/limitdash"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="196dp"
+        app:layout_constraintStart_toEndOf="@+id/DailyLimit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="196dp"
+        android:text="save"
+        app:layout_constraintStart_toEndOf="@+id/limitdash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/currentdailylimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Limit!"
+        android:layout_marginTop="50dp"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/DailyLimit" />
+
+    <TextView
+        android:id="@+id/currentvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="45dp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/currentdailylimit"
+        app:layout_constraintTop_toBottomOf="@id/save" />
+
+    <EditText
+        android:id="@+id/enter_spending_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Spent amount"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentdailylimit"/>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:text="Calculate"
+        app:layout_constraintStart_toEndOf="@+id/enter_spending_value"
+        app:layout_constraintTop_toBottomOf="@id/currentdailylimit" />
+    <TextView
+        android:id="@+id/total_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        android:text="total spent:"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/enter_spending_value"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/total_spent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@id/total_banner"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/calculate"/>
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_banner"
+        android:layout_marginTop="30dp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
